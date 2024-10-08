@@ -1,0 +1,11 @@
+Commands:
+
+- `alembic revision --autogenerate -m "Initial migration"`
+- `alembic upgrade head` — apply
+
+
+
+Notes:
+Include the following in the migration file:
+- op.execute("""CREATE EXTENSION IF NOT EXISTS Postgis;""")
+- op.create_index('idx_locations_coordinates', 'locations', ['coordinates'], unique=False, postgresql_using='gist', if_not_exists=True)

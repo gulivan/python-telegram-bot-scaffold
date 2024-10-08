@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "TelegramExample"
+version = "0.1.0"
+description = "A Telegram bot example using python-telegram-bot"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-telegram-bot = {extras = ["rate-limiter"], version = "^21.5"}
+loguru = "^0.7.2"
+Jinja2 = "^3.1.4"
+psycopg2 = "^2.9.9"
+pytz = "^2024.1"
+alembic = "^1.13.3"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.35"
+asyncpg = "^0.29.0"
+greenlet = "^3.1.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+ruff = "^0.6.7"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
