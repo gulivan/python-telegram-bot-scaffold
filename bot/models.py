@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
+from contextlib import asynccontextmanager
 
 from bot.settings import DATABASE_URL
 
@@ -29,6 +30,10 @@ async def init_db():
         await conn.run_sync(Base.metadata.create_all)
 
 
+@asynccontextmanager
 async def get_db():
-    async with AsyncSessionLocal() as session:
+    session = AsyncSessionLocal()
+    try:
         yield session
+    finally:
+        await session.close()
