@@ -1,8 +1,20 @@
-# TelegramAssistant
+# Telegram Bot Scaffold
 
-A Telegram bot assistant using python-telegram-bot.
+A Telegram bot using python-telegram-bot.
+Included:
+- PostgreSQL Database & SQLAlchemy models
+- Migrations with Alembic
+- Pre-commit hooks with ruff
 
 ## Local development
+Set up poetry:
+```
+poetry install --no-root && poetry shell
+```
+
+Get Telegram Bot Token from @BotFather.
+Create `env.sh` file from `env_example.sh`.
+Execute `source env.sh` to set environment variables.
 
 Run database:
 ```
@@ -34,10 +46,3 @@ poetry run alembic upgrade head
 - `models.py`: SQLAlchemy models
 - `settings.py`: Configuration and environment variables
 - `handlers/`: Folder for bot command handlers
-
-## Development
-
-
-```
-poetry run pre-commit run --all-files
-```
