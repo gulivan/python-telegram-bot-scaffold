@@ -1,0 +1,17 @@
+{
+    "en": {
+      "start_message": "Hi {user}! Your information has been saved.",
+      "help_message": "This bot can help you with...",
+      "error_message": "An error occurred: {error}"
+    },
+    "es": {
+      "start_message": "¡Hola {user}! Tu información ha sido guardada.",
+      "help_message": "Este bot puede ayudarte con...",
+      "error_message": "Ocurrió un error: {error}"
+    },
+    "ru": {
+      "start_message": "Привет {user}! Ваша информация была сохранена.",
+      "help_message": "Этот бот может помочь вам с...",
+      "error_message": "Произошла ошибка: {error}"
+    }
+  }

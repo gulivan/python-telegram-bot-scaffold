@@ -10,3 +10,4 @@ DB_USER = os.getenv("DATABASE_USER")
 DB_PASSWORD = os.getenv("DATABASE_PASSWORD")
 DB_SCHEMA = os.getenv("DATABASE_SCHEMA")
 DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_SCHEMA}"
+BOT_LANGUAGE = os.getenv("BOT_LANGUAGE", "en")
